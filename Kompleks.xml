@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<docs>
+  <members name="Kompleks">
+    <class>
+      <summary>
+        Represents a complex number with arbitrary precision real and imaginary parts.
+      </summary>
+    </class>
+    <Zero>
+      <summary>
+        Gets a complex number that represents zero (0 + 0i).
+      </summary>
+    </Zero>
+    <constructor_default>
+      <summary>
+        Initializes a new instance of the <see cref="Kompleks"/> class with zero value.
+      </summary>
+    </constructor_default>
+    <constructor>
+      <summary>
+        Initializes a new instance of the <see cref="Kompleks"/> class with the specified real and imaginary parts.
+      </summary>
+      <param name="re">The real part of the complex number.</param>
+      <param name="im">The imaginary part of the complex number.</param>
+    </constructor>
+    <ToString>
+      <summary>
+        Returns a string representation of the complex number.
+      </summary>
+      <returns>A formatted string.</returns>
+    </ToString>
+    <Equals>
+      <summary>
+        Determines whether the specified object is equal to the current complex number.
+      </summary>
+      <param name="obj">The object to compare with.</param>
+      <returns><c>true</c> if the objects are equal; otherwise, <c>false</c>.</returns>
+    </Equals>
+    <GetHashCode>
+      <summary>
+        Returns the hash code for the current complex number.
+      </summary>
+      <returns>A hash code based on the real and imaginary parts.</returns>
+    </GetHashCode>
+    <Real>
+      <summary>
+        Gets or sets the real part of the complex number.
+      </summary>
+    </Real>
+    <Imaginary>
+      <summary>
+        Gets or sets the imaginary part of the complex number.
+      </summary>
+    </Imaginary>
+    <Argument>
+      <summary>
+        Gets the argument (phase) of the complex number in radians.
+      </summary>
+    </Argument>
+    <Modulus>
+      <summary>
+        Gets the modulus (magnitude or absolute value) of the complex number as a double.
+      </summary>
+    </Modulus>
+    <operator_add>
+      <summary>
+        Adds two complex numbers.
+      </summary>
+      <param name="lhs">The left-hand side operand.</param>
+      <param name="rhs">The right-hand side operand.</param>
+      <returns>The result of the addition.</returns>
+    </operator_add>
+    <operator_sub>
+      <summary>
+        Subtracts a complex number from another.
+      </summary>
+      <param name="lhs">The left-hand side operand.</param>
+      <param name="rhs">The right-hand side operand.</param>
+      <returns>The result of the subtraction.</returns>
+    </operator_sub>
+    <operator_mul>
+      <summary>
+        Multiplies two complex numbers.
+      </summary>
+      <param name="lhs">The left-hand side operand.</param>
+      <param name="rhs">The right-hand side operand.</param>
+      <returns>The result of the multiplication.</returns>
+    </operator_mul>
+    <operator_div>
+      <summary>
+        Divides a complex number by another.
+      </summary>
+      <param name="lhs">The dividend.</param>
+      <param name="rhs">The divisor.</param>
+      <returns>The result of the division.</returns>
+    </operator_div>
+    <operator_eq>
+      <summary>
+        Determines whether two complex numbers are equal.
+      </summary>
+      <param name="lhs">The left-hand side operand.</param>
+      <param name="rhs">The right-hand side operand.</param>
+      <returns><c>true</c> if the values are equal; otherwise, <c>false</c>.</returns>
+    </operator_eq>
+    <operator_neq>
+      <summary>
+        Determines whether two complex numbers are not equal.
+      </summary>
+      <param name="lhs">The left-hand side operand.</param>
+      <param name="rhs">The right-hand side operand.</param>
+      <returns><c>true</c> if the values are not equal; otherwise, <c>false</c>.</returns>
+    </operator_neq>
+    <operator_unary_neg>
+      <summary>
+        Negates a complex number.
+      </summary>
+      <param name="z">The value to negate.</param>
+      <returns>The negated value.</returns>
+    </operator_unary_neg>
+    <implicit_double>
+      <summary>
+        Implicitly converts a double to a complex number with a zero imaginary part.
+      </summary>
+      <param name="i">The double value.</param>
+      <returns>A new complex number.</returns>
+    </implicit_double>
+    <implicit_decimal>
+      <summary>
+        Implicitly converts a decimal to a complex number with a zero imaginary part.
+      </summary>
+      <param name="i">The decimal value.</param>
+      <returns>A new complex number.</returns>
+    </implicit_decimal>
+    <FromImaginary_decimal>
+      <summary>
+        Creates a pure imaginary complex number from a decimal.
+      </summary>
+      <param name="i">The imaginary coefficient.</param>
+      <returns>A purely imaginary complex number.</returns>
+    </FromImaginary_decimal>
+    <FromImaginary_double>
+      <summary>
+        Creates a pure imaginary complex number from a double.
+      </summary>
+      <param name="i">The imaginary coefficient.</param>
+      <returns>A purely imaginary complex number.</returns>
+    </FromImaginary_double>
+    <Sqrt_double>
+      <summary>
+        Computes the principal square root of a <see cref="double"/> value, returning a complex number.
+      </summary>
+      <param name="i">The value whose square root is to be found.</param>
+      <returns>The square root as a complex number.</returns>
+    </Sqrt_double>
+    <Sqrt_decimal>
+      <summary>
+        Computes the principal square root of a <see cref="decimal"/> value, returning a complex number.
+      </summary>
+      <param name="i">The value whose square root is to be found.</param>
+      <returns>The square root as a complex number.</returns>
+    </Sqrt_decimal>
+    <Abs>
+      <summary>
+        Computes the absolute value (modulus) of a complex number as a decimal.
+      </summary>
+      <param name="z">The complex number.</param>
+      <returns>The absolute value.</returns>
+    </Abs>
+    <explicit_double>
+      <summary>
+        Explicitly converts a complex number to a double, dropping the imaginary part.
+      </summary>
+      <param name="z">The complex number.</param>
+      <returns>The real part as a double.</returns>
+    </explicit_double>
+    <explicit_decimal>
+      <summary>
+        Explicitly converts a complex number to a decimal, dropping the imaginary part.
+      </summary>
+      <param name="z">The complex number.</param>
+      <returns>The real part as a decimal.</returns>
+    </explicit_decimal>
+    <implicit_decimal_tuple>
+      <summary>
+        Implicitly converts a tuple of two decimals to a complex number.
+      </summary>
+      <param name="pair">The tuple containing the real and imaginary parts.</param>
+      <returns>A new complex number.</returns>
+    </implicit_decimal_tuple>
+    <implicit_double_tuple>
+      <summary>
+        Implicitly converts a tuple of two doubles to a complex number.
+      </summary>
+      <param name="pair">The tuple containing the real and imaginary parts.</param>
+      <returns>A new complex number.</returns>
+    </implicit_double_tuple>
+    <Deconstruct_decimal>
+      <summary>
+        Deconstructs the complex number into its real and imaginary decimal components.
+      </summary>
+      <param name="re">The output variable to store the real part.</param>
+      <param name="im">The output variable to store the imaginary part.</param>
+    </Deconstruct_decimal>
+    <Deconstruct_double>
+      <summary>
+        Deconstructs the complex number into its real and imaginary double components.
+      </summary>
+      <param name="re">The output variable to store the real part.</param>
+      <param name="im">The output variable to store the imaginary part.</param>
+    </Deconstruct_double>
+  </members>
+</docs>

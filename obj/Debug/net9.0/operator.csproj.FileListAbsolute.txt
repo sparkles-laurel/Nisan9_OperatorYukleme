@@ -1,0 +1,14 @@
+/home/sparkles/proj/algo/operator/obj/Debug/net9.0/operator.GeneratedMSBuildEditorConfig.editorconfig
+/home/sparkles/proj/algo/operator/obj/Debug/net9.0/operator.AssemblyInfoInputs.cache
+/home/sparkles/proj/algo/operator/obj/Debug/net9.0/operator.AssemblyInfo.cs
+/home/sparkles/proj/algo/operator/obj/Debug/net9.0/operator.csproj.CoreCompileInputs.cache
+/home/sparkles/proj/algo/operator/bin/Debug/net9.0/operator
+/home/sparkles/proj/algo/operator/bin/Debug/net9.0/operator.deps.json
+/home/sparkles/proj/algo/operator/bin/Debug/net9.0/operator.runtimeconfig.json
+/home/sparkles/proj/algo/operator/bin/Debug/net9.0/operator.dll
+/home/sparkles/proj/algo/operator/bin/Debug/net9.0/operator.pdb
+/home/sparkles/proj/algo/operator/obj/Debug/net9.0/operator.dll
+/home/sparkles/proj/algo/operator/obj/Debug/net9.0/refint/operator.dll
+/home/sparkles/proj/algo/operator/obj/Debug/net9.0/operator.pdb
+/home/sparkles/proj/algo/operator/obj/Debug/net9.0/operator.genruntimeconfig.cache
+/home/sparkles/proj/algo/operator/obj/Debug/net9.0/ref/operator.dll
