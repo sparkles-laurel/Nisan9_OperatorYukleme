@@ -5,6 +5,9 @@ Console.WriteLine($"c0 from named constructor: {c0}");
 Console.WriteLine("=== Kompleks Tuple Conversions ===");
 
 // 1. Implicit conversion from (decimal, decimal) tuple
+// Burada (decimal, decimal) -> Complex dönüşümü yapan implicit operator Complex kullanılıyor.
+// (Complex.cs, satır 205)
+// Bundan sonra new Complex yazmak yerine bu yapılacak
 Complex c1 = (3.5m, 2.1m);
 Console.WriteLine($"c1 from (decimal, decimal): {c1}");
 
