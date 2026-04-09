@@ -46,15 +46,18 @@ public class Complex
     /// <summary>
     /// Gets a complex number that represents zero (0 + 0i).
     /// </summary>
-    public static Complex Zero => new(0m, 0m);
+    public static Complex Zero
+    {
+        get { return new Complex(0m, 0m); }
+    }
 
     /// <summary>
     /// Gets or sets the real part of the complex number.
     /// </summary>
     public decimal Real
     {
-        get => re;
-        set => re = value;
+        get { return re; }
+        set { re = value; }
     }
 
     /// <summary>
@@ -62,8 +65,8 @@ public class Complex
     /// </summary>
     public decimal Imaginary
     {
-        get => im;
-        set => im = value;
+        get { return im; }
+        set { im = value; }
     }
 
     /// <summary>
@@ -71,7 +74,10 @@ public class Complex
     /// </summary>
     public double Argument
     {
-        get => Math.Atan((double)im / (double)re);
+        get
+        {
+            return Math.Atan((double)im / (double)re);
+        }
     }
 
     /// <summary>
@@ -79,7 +85,10 @@ public class Complex
     /// </summary>
     public double Modulus
     {
-        get => (double)(re * re + im * im).Sqrt();
+        get
+        {
+            return (double)(re * re + im * im).Sqrt();
+        }
     }
 
     /// <summary>
@@ -132,7 +141,10 @@ public class Complex
     /// <param name="lhs">The left-hand side operand.</param>
     /// <param name="rhs">The right-hand side operand.</param>
     /// <returns><c>true</c> if the values are equal; otherwise, <c>false</c>.</returns>
-    public static bool operator ==(Complex lhs, Complex rhs) => Complex.Equals(lhs, rhs);
+    public static bool operator ==(Complex lhs, Complex rhs)
+    {
+        return Complex.Equals(lhs, rhs);
+    }
 
     /// <summary>
     /// Determines whether two complex numbers are not equal.
@@ -140,70 +152,100 @@ public class Complex
     /// <param name="lhs">The left-hand side operand.</param>
     /// <param name="rhs">The right-hand side operand.</param>
     /// <returns><c>true</c> if the values are not equal; otherwise, <c>false</c>.</returns>
-    public static bool operator !=(Complex lhs, Complex rhs) => !Complex.Equals(lhs, rhs);
+    public static bool operator !=(Complex lhs, Complex rhs)
+    {
+        return !Complex.Equals(lhs, rhs);
+    }
 
     /// <summary>
     /// Negates a complex number.
     /// </summary>
     /// <param name="z">The value to negate.</param>
     /// <returns>The negated value.</returns>
-    public static Complex operator -(Complex z) => new(-z.re, -z.im);
+    public static Complex operator -(Complex z)
+    {
+        return new Complex(-z.re, -z.im);
+    }
 
     /// <summary>
     /// Implicitly converts a double to a complex number with a zero imaginary part.
     /// </summary>
     /// <param name="i">The double value.</param>
     /// <returns>A new complex number.</returns>
-    public static implicit operator Complex(double i) => new((decimal)i, 0);
+    public static implicit operator Complex(double i)
+    {
+        return new Complex((decimal)i, 0);
+    }
 
     /// <summary>
     /// Implicitly converts a decimal to a complex number with a zero imaginary part.
     /// </summary>
     /// <param name="i">The decimal value.</param>
     /// <returns>A new complex number.</returns>
-    public static implicit operator Complex(decimal i) => new(i, 0);
+    public static implicit operator Complex(decimal i)
+    {
+        return new Complex(i, 0);
+    }
 
     /// <summary>
     /// Implicitly converts a tuple of two decimals to a complex number.
     /// </summary>
     /// <param name="pair">The tuple containing the real and imaginary parts.</param>
     /// <returns>A new complex number.</returns>
-    public static implicit operator Complex((decimal, decimal) pair) => new(pair.Item1, pair.Item2);
+    public static implicit operator Complex((decimal, decimal) pair)
+    {
+        return new Complex(pair.Item1, pair.Item2);
+    }
 
     /// <summary>
     /// Implicitly converts a tuple of two doubles to a complex number.
     /// </summary>
     /// <param name="pair">The tuple containing the real and imaginary parts.</param>
     /// <returns>A new complex number.</returns>
-    public static implicit operator Complex((double, double) pair) => new(pair.Item1, pair.Item2);
+    public static implicit operator Complex((double, double) pair)
+    {
+        return new Complex(pair.Item1, pair.Item2);
+    }
 
     /// <summary>
     /// Explicitly converts a complex number to a double, dropping the imaginary part.
     /// </summary>
     /// <param name="z">The complex number.</param>
     /// <returns>The real part as a double.</returns>
-    public static explicit operator double(Complex z) => (double)z.re;
+    public static explicit operator double(Complex z)
+    {
+        return (double)z.re;
+    }
 
     /// <summary>
     /// Explicitly converts a complex number to a decimal, dropping the imaginary part.
     /// </summary>
     /// <param name="z">The complex number.</param>
     /// <returns>The real part as a decimal.</returns>
-    public static explicit operator decimal(Complex z) => z.re;
+    public static explicit operator decimal(Complex z)
+    {
+        return z.re;
+    }
 
     /// <summary>
     /// Creates a pure imaginary complex number from a decimal.
     /// </summary>
     /// <param name="i">The imaginary coefficient.</param>
     /// <returns>A purely imaginary complex number.</returns>
-    public static Complex FromImaginary(decimal i) => new(0, i);
+    public static Complex FromImaginary(decimal i)
+    {
+        return new Complex(0, i);
+    }
 
     /// <summary>
     /// Creates a pure imaginary complex number from a double.
     /// </summary>
     /// <param name="i">The imaginary coefficient.</param>
     /// <returns>A purely imaginary complex number.</returns>
-    public static Complex FromImaginary(double i) => new(0, (decimal)i);
+    public static Complex FromImaginary(double i)
+    {
+        return new Complex(0, (decimal)i);
+    }
 
     /// <summary>
     /// Computes the principal square root of a <see cref="double"/> value, returning a complex number.
@@ -213,7 +255,7 @@ public class Complex
     public static Complex Sqrt(double i)
     {
         if (i < 0) return FromImaginary(Math.Sqrt(-i));
-        return new((decimal)Math.Sqrt(i), 0);
+        return new Complex((decimal)Math.Sqrt(i), 0);
     }
 
     /// <summary>
@@ -224,7 +266,7 @@ public class Complex
     public static Complex Sqrt(decimal i)
     {
         if (i < 0) return FromImaginary(i.Abs().Sqrt());
-        return new(i.Sqrt(), 0);
+        return new Complex(i.Sqrt(), 0);
     }
 
     /// <summary>
@@ -232,7 +274,10 @@ public class Complex
     /// </summary>
     /// <param name="z">The complex number.</param>
     /// <returns>The absolute value.</returns>
-    public static decimal Abs(Complex z) => (z.re * z.re + z.im * z.im).Sqrt();
+    public static decimal Abs(Complex z)
+    {
+        return (z.re * z.re + z.im * z.im).Sqrt();
+    }
 
     /// <summary>
     /// Deconstructs the complex number into its real and imaginary decimal components.
