@@ -1,3 +1,7 @@
+Console.WriteLine("=== Named constructor of Complex ===");
+Complex c0 = new Complex(3.0, 2.0);
+Console.WriteLine($"c0 from named constructor: {c0}");
+
 Console.WriteLine("=== Kompleks Tuple Conversions ===");
 
 // 1. Implicit conversion from (decimal, decimal) tuple
